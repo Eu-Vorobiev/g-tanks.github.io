@@ -1,0 +1,209 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  // ::selection,
+  // ::-moz-selection {
+  //   background-color: $yellow;
+  //   color: white;
+  // }
+
+  scrollbar-width: thin;
+  scrollbar-color: $yellow $black;
+
+  ::-webkit-scrollbar {
+    width: .75rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $yellow;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $content-font;
+  background: $black;
+  font-weight: 600;
+  color: $white;
+  min-height: 100vh;
+  transition: $transition;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+
+  &.page {
+    @include pageFlex;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition;
+}
+
+button,
+.btn {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: $transition;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  &.main {
+    flex: 1 0 auto;
+
+    &--page-not-found {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("../img/bg/spark-bg-left.png"), url("../img/bg/spark-bg-right.png");
+      background-repeat: no-repeat;
+      background-size: contain, contain;
+      background-position: left calc((100vw - 1500px) / 2 - 20%) center, right calc((100vw - 1500px) / 2 - 20%) center;
+
+      @media screen and (max-width: 1400px) {
+        background-position: left calc((100vw - 1500px) / 2 - 10%) center, right calc((100vw - 1500px) / 2 - 10%) center;
+      }
+
+      @media screen and (max-width: 1200px) {
+        background-position: left -15% center, right -15% center;
+      }
+
+      @media screen and (max-width: 991px) {
+        background-position: left -20% center, right -20% center;
+      }
+
+      @media screen and (max-width: 768px) {
+        background-position: left -30% center, right -30% center;
+      }
+    }
+
+    &--payment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(to top, rgba($black, .85)), url("../img/bg/pay-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &.inner-page {
+    margin-top: 60px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-top: 20px;
+    }
+  }
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--sm {
+    max-width: 950px;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.section {
+  &__title {
+    font-family: $content-font;
+    font-weight: 700;
+    font-size: clamp(rem(20), 5vw, rem(25));
+    line-height: divider(37, 25);
+    letter-spacing: 0.02em;
+    color: $white;
+
+    &--lg {
+      font-size: clamp(rem(22), 5vw, rem(30));
+    }
+  }
+}
+
+.overlay,
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -200%;
+  z-index: 999;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+
+  &.shown {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  z-index: 1010;
+}

@@ -1,0 +1,11 @@
+body {
+  font-family: "QuadratGroteskNewBold";
+  background: gainsboro;
+  padding: 30%;
+  color: rosybrown;
+  font-size: 100px;
+}
+span  {
+  display: inline;
+  font-size: 120px;
+}

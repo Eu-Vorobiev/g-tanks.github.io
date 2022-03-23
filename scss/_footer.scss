@@ -1,0 +1,78 @@
+.footer {
+  padding: 27px 0;
+  border-top: 1px solid rgba($white, .1);
+  display: flex;
+  flex: 0 1 auto;
+  font-style: normal;
+  font-size: rem(16);
+  line-height: divider(27, 16);
+  color: $white;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1190px) {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 575px) {
+      justify-content: center;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    gap: 12px 40px;
+
+    @media screen and (max-width: 1400px) {
+      gap: 15px 20px;
+    }
+  }
+
+  &__rating {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info {
+    color: rgba($white, .7);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 75px;
+
+    @media screen and (max-width: 1400px) {
+      gap: 15px 40px;
+    }
+
+    @media screen and (max-width: 1190px) {
+      gap: 10px 40px;
+      order: 1;
+      flex-grow: 1;
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: divider(27, 16);
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.page-not-found {
+  display: flex;
+  margin: 5% 0 10%;
+
+  &__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  b {
+    font-family: $quadrat-font;
+    font-weight: normal;
+    font-size: clamp(rem(100), 20vw, rem(200));
+    line-height: 1.2;
+    text-align: center;
+    overflow: hidden;
+    background: url("../img/404-text-decor.png"), $gradient-yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left -10% bottom 20%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: clamp(rem(20), 4vw, rem(37));
+    line-height: divider(55, 37);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $white;
+  }
+
+  &__btn {
+    align-self: stretch;
+    min-width: 280px;
+  }
+}

@@ -1,0 +1,146 @@
+.content {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 75px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  h3 {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: clamp(rem(16), 5vw, rem(18));
+    line-height: divider(24, 18);
+    letter-spacing: 0.02em;
+    color: $white;
+  }
+
+  p {
+    margin: 20px 0;
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: clamp(rem(13), 4vw, rem(15));
+    line-height: divider(22, 15);
+    letter-spacing: 0.02em;
+    color: rgba($white, .7);
+
+    @media screen and (max-width: 575px) {
+      margin: 10px 0;
+    }
+  }
+
+  ol,
+  ul {
+    list-style: decimal;
+    padding-left: 18px;
+
+    li+li {
+      margin-top: 15px;
+
+      @media screen and (max-width: 575px) {
+        margin-top: 10px;
+      }
+    }
+
+    li {
+      font-family: $roboto;
+      font-weight: normal;
+      font-size: clamp(rem(13), 4vw, rem(15));
+      line-height: divider(22, 15);
+      letter-spacing: 0.02em;
+      color: rgba($white, .7);
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  a {
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: clamp(rem(13), 4vw, rem(15));
+    line-height: divider(22, 15);
+    letter-spacing: 0.02em;
+    color: rgba($white, .7);
+
+    &:hover {
+      color: rgba($white, 1);
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    b {
+      display: block;
+      margin-top: 4px;
+    }
+
+    span {
+      padding-left: 15px;
+      display: block;
+      font-family: $roboto;
+      font-weight: normal;
+      font-size: clamp(rem(13), 4vw, rem(15));
+      line-height: divider(22, 15);
+      letter-spacing: 0.02em;
+      color: rgba($white, .7);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background: rgba($white, .7);
+        display: block;
+
+        @media screen and (max-width: 475px) {
+          top: 9px;
+        }
+      }
+    }
+  }
+
+  span {
+    margin: 10px 0;
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: clamp(rem(13), 4vw, rem(15));
+    line-height: divider(22, 15);
+    letter-spacing: 0.02em;
+    color: rgba($white, .7);
+  }
+
+  img {
+    margin-top: 40px;
+
+    @media screen and (max-width: 575px) {
+      margin-top: 20px;
+    }
+  }
+}

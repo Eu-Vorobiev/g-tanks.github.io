@@ -1,0 +1,77 @@
+.payment {
+  display: flex;
+  margin: 5% 0 10%;
+
+  &__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(rem(40), 10vw, rem(120));
+    line-height: 1.2;
+    text-align: center;
+    overflow: hidden;
+    background: url("../img/404-text-decor.png"), $gradient-yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left -10% bottom 20%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: clamp(rem(20), 4vw, rem(37));
+    line-height: divider(55, 37);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $white;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 475px) {
+      margin-top: 10px;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: clamp(rem(16), 3vw, rem(18));
+    line-height: divider(27, 18);
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgba($white, .7);
+
+    @media screen and (max-width: 768px) {
+      max-width: 80%;
+      margin: 0px auto 50px;
+    }
+
+    @media screen and (max-width: 475px) {
+      max-width: 100%;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__btn {
+    align-self: stretch;
+    min-width: 280px;
+
+    @media screen and (max-width: 575px) {
+      max-width: 90%;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

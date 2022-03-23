@@ -1,0 +1,225 @@
+.header {
+  padding: 28px 0px;
+  border-bottom: 1px solid rgba($white, .1);
+  background: #1f1f1f;
+  transition: $transition;
+  position: relative;
+
+  &.b-bottom {
+    border-color: transparent;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-height: 28px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 991px) {
+      position: absolute;
+      top: -120%;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      width: 100%;
+      min-height: calc(100vh - 85px);
+      padding: 25px 0 60px;
+      flex-direction: column;
+      align-items: start;
+      background: url("../img/bg/mobile-menu-bg.png"), #1f1f1f;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba($black, .8);
+      }
+    }
+
+    &.active {
+      top: 85px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: 40px;
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__language {
+    display: flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    ul {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__actions {
+    padding-left: 13px;
+    border-left: 1px solid rgba($white, .1);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 3px;
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      padding: 0 15px;
+      border-left: 0;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+      gap: 30px;
+      align-items: initial;
+    }
+  }
+
+  &__download {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    color: $yellow;
+    margin-top: 3px;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      margin-left: 15px;
+      flex-direction: column;
+      width: 80px;
+      align-items: end;
+      text-align: end;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin-left: 8%;
+    }
+
+    @media screen and (max-width: 650px) {
+      margin-left: 5%;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-left: 0;
+      align-self: center;
+    }
+
+    &:hover {
+      filter: brightness(1.5);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      margin-top: -4px;
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      width: 33px;
+      height: 28px;
+      gap: 6px;
+      cursor: pointer;
+
+      &:hover {
+        span:first-child {
+          width: 75%;
+        }
+
+        span:nth-child(2) {
+          width: 100%;
+        }
+      }
+
+      span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: #9C9D9C;
+        border-radius: 2px;
+        transition: $transition;
+
+        &:nth-child(2) {
+          width: 75%;
+        }
+      }
+
+      &.active {
+        transform: translateX(6px);
+
+        span:first-child {
+          transform: rotate(45deg) translate(-1px, 8px);
+          transform-origin: center;
+        }
+
+        span:nth-child(2) {
+          transform: rotate(-45deg) translate(-2px, -7px);
+          width: 100%;
+          transform-origin: center;
+        }
+
+        &:hover {
+
+          span:first-child,
+          span:nth-child(2) {
+            width: 33px;
+            filter: brightness(1.4);
+          }
+        }
+      }
+    }
+  }
+}

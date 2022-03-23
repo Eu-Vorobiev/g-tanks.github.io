@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTanks | Страница новости</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="font/QuadratGroteskNewBold/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,700" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo header__logo">
+        <img src="img/logo.svg" alt="GTanks">
+      </a>
+      <!-- /.logo header__logo -->
+      <div class="header__inner">
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">
+                <img src="img/icons/charts.svg" alt="Рейтинги">
+                Рейтинги
+              </a></li>
+            <li class="nav__item"><a href="#" class="nav__link">
+                <img src="img/icons/chat.svg" alt="Форум">
+                Форум
+              </a></li>
+            <li class="nav__item"><a href="#" class="nav__link">
+                <img src="img/icons/document.svg" alt="Вики">
+                Вики
+              </a></li>
+            <li class="nav__item"><a href="#" class="nav__link">
+                <img src="img/icons/wallet.svg" alt="Счет">
+                Пополнить игровой счет
+              </a></li>
+          </ul>
+        </nav>
+        <!-- /.nav header__nav -->
+        <div class="header__actions">
+          <ul class="language header__language" data-selected-lang="Ru">
+            <img class="language__arrow" src="img/icons/arrow-down.svg" alt="Выбрать язык">
+            <li class="language__item">
+              <img src="img/icons/ru.svg" alt="Русский">
+              Ru
+            </li>
+            <ul class="language__options">
+              <li class="language__item-select" data-value="Ru">
+                <img src="img/icons/ru.svg" alt="Русский">
+                Ru
+              </li>
+              <li class="language__item-select" data-value="En">
+                <img src="img/icons/en.svg" alt="Английский">En</li>
+            </ul>
+          </ul>
+          <form class="language-radio radio" action="#">
+            <div class="language-radio__btn radio-btn">
+              <input id="radio1" type="radio" name="radio" value="Ru" checked>
+              <label for="radio1"><span>Ru</span></label>
+            </div>
+            <div class="language-radio__btn radio-btn">
+              <input id="radio2" type="radio" name="radio" value="En">
+              <label for="radio2"><span>En</span></label>
+            </div>
+          </form>
+          <a class="header__download" href="#" download>
+            <img src="img/icons/game.svg" alt="Скачать"> Скачать клиент</a>
+          <ul class="social social--header">
+            <li class="social__item"><a href="vk.com" class="social__link"><img src="img/icons/vk.svg" alt="vk"></a>
+            </li>
+            <li class="social__item"><a href="tlgrm.ru" class="social__link"><img src="img/icons/telegram.svg"
+                  alt="telegram"></a></li>
+            <li class="social__item"><a href="discord.com" class="social__link"><img src="img/icons/discord.svg"
+                  alt="discord"></a></li>
+            <li class="social__item"><a href="youtube.com" class="social__link"><img src="img/icons/youtube.svg"
+                  alt="youtube"></a></li>
+          </ul>
+          <!-- /.social header__social -->
+        </div>
+        <!-- /.header__actions -->
+      </div>
+      <button class="menu-btn" id="menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- /.container header__container -->
+  </header>
+  <!-- /.header -->
+
+  <main class="main inner-page">
+
+    <section class="article-page">
+      <div class="container article-page__container">
+        <article class="article news__article">
+          <h2 class="section__title article__title">Новая индикация урона и другие изменения</h2>
+          <time class="news-item__datetime" datetime="2021-03-25T08:00">25 марта, 8:00</time>
+          <picture>
+            <source media="(min-width: 991px)" srcset="img/news/news2-lg.png">
+            <img src="img/news/news2-sm.png" alt="картинка новости">
+          </picture>
+          <div class="article__content">
+            <p>Уважаемые танкисты!</p>
+            <p>Мы рады сообщить вам, что с сегодняшнего дня у “GTanks” появилась новая, более совершенная и
+              функциональная главная страница проекта. То, что вы видите, является первым плодом новой визуальной
+              концепции проекта. Главные задачи, которые мы стремились реализовать — это простота, понятность и удобство
+              в использовании.</p>
+            <p>Теперь всё самое важное и интересное находится на новой — главной странице игры. Дизайн нашего форума был
+              обновлен в соответствии с общей дизайн-концепцией проекта. Благодарим дизайнеров за огромный труд!</p>
+            <p>Также, доводим до вашего сведения, что был осуществлен переход на единый аккаунт ко всем ресурсам нашего
+              проекта.</p>
+            <p>Словом, смотрите, пробуйте, исследуйте, ну, а все пожелания и предложения оставляйте в специальной теме
+              на новом форуме.</p>
+          </div>
+        </article>
+        <!-- /.article news__article -->
+        <aside class="aside article__aside news__aside">
+          <h3 class="aside__title">Другие новости</h3>
+          <div class="aside__inner">
+            <a class="news-item news-item--page" href="article.html">
+              <div class="news-item__photo">
+                <img src="img/news/news2-sm.png" alt="вторая новость">
+              </div>
+              <div class="news-item__content">
+                <time class="news-item__datetime" datetime="2021-03-25T23:10">25.03.2021, 23:10</time>
+                <h3 class="news-item__caption">Новая индикация урона и другие изменения</h3>
+              </div>
+            </a>
+            <a class="news-item news-item--page" href="article.html">
+              <div class="news-item__photo">
+                <img src="img/news/news1-sm.png" alt="первая новость">
+              </div>
+              <div class="news-item__content">
+                <time class="news-item__datetime" datetime="2021-04-01T23:10">Вчера, 23:10</time>
+                <h3 class="news-item__caption">Третий общий тест GTanks</h3>
+              </div>
+            </a>
+          </div>
+          <button class="btn aside__btn">Больше новостей</button>
+        </aside>
+        <!-- /.aside article__aside news__aside -->
+      </div>
+      <!-- /.container article-page__container -->
+    </section>
+    <!-- /.article-page -->
+
+  </main>
+  <!-- /.main -->
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__copy">
+        <div class="footer__rating">
+          <img src="img/icons/rating6+.svg" alt="Старше 6 лет">
+        </div>
+        <div class="footer__info">
+          © «GTanks» 2016-2021
+        </div>
+      </div>
+      <!-- /.footer__copy -->
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a href="mailto:help@gtanksonline.com" class="footer__nav-link">help@gtanksonline.com</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Правила игры</a>
+        </li>
+      </ul>
+      <!-- /.footer__nav -->
+      <ul class="social footer__social">
+        <li class="social__item"><a href="vk.com" class="social__link"><img src="img/icons/vk.svg" alt="vk"></a></li>
+        <li class="social__item"><a href="tlgrm.ru" class="social__link"><img src="img/icons/telegram.svg"
+              alt="telegram"></a></li>
+        <li class="social__item"><a href="discord.com" class="social__link"><img src="img/icons/discord.svg"
+              alt="discord"></a></li>
+        <li class="social__item"><a href="youtube.com" class="social__link"><img src="img/icons/youtube.svg"
+              alt="youtube"></a></li>
+      </ul>
+      <!-- /.social footer__social -->
+    </div>
+  </footer>
+  <!-- /.footer -->
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

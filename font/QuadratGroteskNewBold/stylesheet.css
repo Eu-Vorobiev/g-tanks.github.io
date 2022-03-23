@@ -1,0 +1,7 @@
+@font-face {font-family: "QuadratGroteskNewBold"; 
+  src: url("QuadratGroteskNewBold.woff") format("woff"),
+       url("QuadratGroteskNewBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
